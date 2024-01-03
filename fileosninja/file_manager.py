@@ -1,3 +1,4 @@
+import os
 import shutil
 
 def read_file(filename):
@@ -49,9 +50,6 @@ def write_file(filename, content="", append=True):
             file.write(content)
     except IOError as e:
         raise IOError(f"Error creating/appending to the file '{filename}': {e}")
-    
-import os
-import shutil
 
 def move_file(file_path, new_folder):
     """
