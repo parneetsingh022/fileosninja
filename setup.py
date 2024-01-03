@@ -13,7 +13,7 @@ setup(
     description=DESCRIPTION,
     long_description=pathlib.Path("README.md").read_text(),
     long_description_content_type="text/markdown",
-    packages=find_packages(exclude=['docs']),
+    packages=find_packages(exclude=['docs', 'requirements.txt']),
     install_requires=[],
     license="The Unlicense",
     project_urls={
