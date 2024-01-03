@@ -2,6 +2,9 @@
 
 **fileosninja** is a Python module that empowers your projects with ninja-like file I/O operations and essential OS-related functionalities. It provides a streamlined and efficient solution for handling files and performing common operating system tasks.
 
+For documentation refer:
+https://parneetsingh022.github.io/fileosninja
+
 # Contributions
 We welcome and appreciate contributions from the community! Whether you want to report a bug, suggest a new feature, or contribute code/documentation, your input is valuable to us. Here's how you can get involved:
 
