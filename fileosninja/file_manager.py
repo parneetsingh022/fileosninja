@@ -82,5 +82,64 @@ def move_file(file_path, new_folder):
         raise FileNotFoundError(f"The source file '{file_path}' does not exist.")
     except IOError as e:
         raise IOError(f"Error moving the file from '{file_path}' to '{new_folder}': {e}")
+    
+def rename_directory(path, new_name):
+    """
+    Renames the given path (file or folder) to a new name.
 
+    Parameters:
+    - path (str): The path to the file/folder to be renamed.
+    - new_name (str): The new name of the file/folder.
 
+    Returns:
+    None
+
+    Raises:
+    FileNotFoundError: If the source file is not found.
+    IOError: If an error occurs while renaming the file.
+    """
+    try:
+        # path to the file/folder excluding itself
+        base_directory = os.path.dirname(path) 
+
+        # construct the new path with the new name
+        new_path = os.path.join(base_directory, new_name)
+
+        # rename the directory
+        os.rename(path, new_path)
+    except FileNotFoundError:
+        raise FileNotFoundError(f"The source file '{path}' does not exist.")
+    except IOError as e:
+        raise IOError(f"Error renaming the file from '{os.path.basename(path)}' to '{new_name}': {e}")
+
+def copy_file(file_path, destination_folder, copy_name=None):
+    """
+    Copies a file to a destination folder.
+
+    Parameters:
+    - file_path (str): The path to the file to be copied.
+    - destination_folder (str): The path to the destination folder where the file will be copied to.
+    - copy_name (str): The name of the copied file. If None, it will be copy_of_{file_name}
+
+    Returns:
+    None
+
+    Raises:
+    FileNotFoundError: If the source file is not found.
+    IOError: If an error occurs while copying the file.
+    """
+    try:
+        if not copy_name:
+            # name of file
+            file_name = os.path.basename(file_path)
+            copy_name = f"copy_of_{file_name}"
+
+        # begin copying
+        destination_path = os.path.join(destination_folder, copy_name)
+        shutil.copy(file_path, destination_path)
+
+    except FileNotFoundError:
+        raise FileNotFoundError(f"The source file '{file_path}' does not exist.")
+    except IOError as e:
+        raise IOError(f"Error copying the file from '{file_path}' to '{destination_path}': {e}")
+    
