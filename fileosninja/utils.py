@@ -5,7 +5,7 @@ def print_directory(folder_path, depth=3):
     Print the structure of a folder to the given depth.
 
     Parameters:
-    - foldername (str): The name or path of the folder to display the structure of
+    - folder_path (str): The name or path of the folder to display the structure of
     - depth (int): The depth at which to display the structure of (default depth is 3)
 
     Returns:
@@ -13,7 +13,7 @@ def print_directory(folder_path, depth=3):
 
     Raises:
     AssertionError: If the specified folder is not found.
-    IOError: If an error occurs during a folder operation
+    IOError: If an error occurs during a folder operation.
     """
 
     # Recursively print directory
