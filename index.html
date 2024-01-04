@@ -1,0 +1,688 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>fileosninja</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fileosninja" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="fileosninja" class="md-header__button md-logo" aria-label="fileosninja" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            fileosninja
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              FileOSNinja
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="." class="md-tabs__link">
+        
+  
+    
+  
+  FileOSNinja
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="fileosninja" class="md-nav__button md-logo" aria-label="fileosninja" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    fileosninja
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    FileOSNinja
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    FileOSNinja
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing package
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file_manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      file_manager
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="file_manager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      read_file
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      write_file
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      move_file
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classesfile_handler" class="md-nav__link">
+    <span class="md-ellipsis">
+      classes.file_handler
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="classes.file_handler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filehandler" class="md-nav__link">
+    <span class="md-ellipsis">
+      FileHandler
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FileHandler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set_append_mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_append_mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read_file_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      read_file
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write_file_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      write_file
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move_file_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      move_file
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utils" class="md-nav__link">
+    <span class="md-ellipsis">
+      utils
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="utils">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#print_directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      print_directory
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="fileosninja">FileOSNinja</h1>
+<h2 id="installing-package">Installing package</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip install fileosninja
+</code></pre></div>
+<h2 id="file_manager">file_manager</h2>
+<p>The File Manager provides user-friendly functions for performing operations on a file. While it is suitable for handling a few operations on a file, when dealing with a more extensive set of operations, it is advisable to employ the <a href="#filehandler">FileHandler</a>. Serving as the class representation of the File Manager, the <a href="#filehandler">FileHandler</a> proves to be convenient when executing multiple operations on a single file.</p>
+<p>We can import 'file_manager' from 'fileosninja' in the following manner:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">fileosninja</span> <span class="kn">import</span> <span class="n">file_manager</span>
+</code></pre></div>
+<h3 id="read_file">read_file</h3>
+<blockquote>
+<p>This method reads the contents of a file and returns the content as a string.</p>
+</blockquote>
+<p>Parameters:</p>
+<ul>
+<li><code>filename</code> (str): The name or path of the file to be read.</li>
+</ul>
+<p>Returns:</p>
+<ul>
+<li>str: The content of the file as a string.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;path/to/file/file.txt&quot;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">file_manager</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="write_file">write_file</h3>
+<blockquote>
+<p>Creates a new file or appends content to an existing file with the specified filename.</p>
+</blockquote>
+<p>Parameters:</p>
+<ul>
+<li><code>filename</code> (str): The name or path of the file to be created or appended to.</li>
+<li><code>content</code> (str, optional): The content to be written to the file.</li>
+<li><code>append</code> (bool, optional): If True, appends content to an existing file; if False, overwrites the file. <strong>Default value is <code>True</code></strong></li>
+</ul>
+<p>Appending to a file or creating an new file.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">file_path</span> <span class="o">=</span> <span class="s2">&quot;path/to/file/file.txt&quot;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">content</span> <span class="o">=</span> <span class="s2">&quot;this is file content&quot;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">file_manager</span><span class="o">.</span><span class="n">write_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="n">content</span><span class="p">)</span>
+</code></pre></div></p>
+<p>Writing multiple lines
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">file_path</span> <span class="o">=</span> <span class="s2">&quot;path/to/file/file.txt&quot;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">file_content</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;This is line 1.</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="s1">This is line 2.</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="s1">This is line 3.&#39;&#39;&#39;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">file_manager</span><span class="o">.</span><span class="n">write_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="n">file_content</span><span class="p">)</span>
+</code></pre></div></p>
+<p>Overwriting content in a file
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">file_path</span> <span class="o">=</span> <span class="s2">&quot;path/to/file/file.txt&quot;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">content</span> <span class="o">=</span> <span class="s2">&quot;this is file content&quot;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">file_manager</span><span class="o">.</span><span class="n">write_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="n">content</span><span class="p">,</span> <span class="n">append</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div></p>
+<h3 id="move_file">move_file</h3>
+<blockquote>
+<p>Moves a file to a new folder.</p>
+</blockquote>
+<p>Parameters:</p>
+<ul>
+<li><code>file_path</code> (str): The path to the file to be moved.</li>
+<li><code>new_folder</code> (str): The path to the destination folder where the file will be moved.</li>
+</ul>
+<p><code>Note if the new folder does not exist, it will be created.</code>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">file_path</span> <span class="o">=</span> <span class="s2">&quot;folder/myfile.txt&quot;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">new_folder</span> <span class="o">=</span> <span class="s2">&quot;new_folder/folder1/&quot;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">move_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">new_folder</span><span class="p">)</span>
+</code></pre></div></p>
+<h2 id="classesfile_handler">classes.file_handler</h2>
+<p>This is a class representation of <a href="#file_manager">file_manager</a>. File Handler should be used when
+we have to do multiple operations on the same file and we don't want to write the name
+of the file again and again.</p>
+<h3 id="filehandler">FileHandler</h3>
+<blockquote>
+<p>Initialize a FileHandler object.</p>
+</blockquote>
+<p>Parameters:</p>
+<ul>
+<li><code>filename</code> (str): The name of the file to be handled.</li>
+<li><code>append</code> (bool, optional): A flag indicating whether to append to an existing file 
+(default is True). If False, the file will be truncated.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="sd">&#39;&#39;&#39;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="sd">Note:</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="sd">    If `append` is not provided or set to True, any content written to the file will be appended.</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="sd">    If `append` is set to False, new content will overwrite existing content.</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="sd">&#39;&#39;&#39;</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="n">file</span> <span class="o">=</span> <span class="n">FileHandler</span><span class="p">(</span><span class="s2">&quot;example.txt&quot;</span><span class="p">,</span> <span class="n">append</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> 
+</code></pre></div>
+<h4 id="set_append_mode"><strong>set_append_mode</strong></h4>
+<blockquote>
+<p>Sets the append mode of the file.</p>
+</blockquote>
+<p>Parameters</p>
+<ul>
+<li><code>new_append_mode</code> (bool): The new append mode. Set to <code>True</code> for append mode (content will be added to the end of the file), or <code>False</code> for overwrite mode (existing content will be replaced).</li>
+</ul>
+<p>Usage:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">file</span> <span class="o">=</span> <span class="n">FileHandler</span><span class="p">(</span><span class="s2">&quot;example.txt&quot;</span><span class="p">,</span> <span class="n">append</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">file</span><span class="o">.</span><span class="n">set_append_mode</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div></p>
+<h4 id="read_file_1"><strong>read_file</strong></h4>
+<blockquote>
+<p>Read the contents of the file associated with this <code>FileHandler</code> instance.</p>
+</blockquote>
+<p>Returns</p>
+<ul>
+<li><code>str</code>: The content of the file.</li>
+</ul>
+<p>Usage
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">file</span> <span class="o">=</span> <span class="n">FileHandler</span><span class="p">(</span><span class="s2">&quot;example.txt&quot;</span><span class="p">,</span> <span class="n">append</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">file_content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read_file</span><span class="p">()</span>
+</code></pre></div></p>
+<h4 id="write_file_1"><strong>write_file</strong></h4>
+<blockquote>
+<p>Write content to the file associated with this <code>FileHandler</code> instance.</p>
+</blockquote>
+<p>Parameters</p>
+<ul>
+<li><code>content</code> (str, optional): The content to be written to the file. Default is an empty string.</li>
+</ul>
+<p>Usage
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">file</span> <span class="o">=</span> <span class="n">FileHandler</span><span class="p">(</span><span class="s2">&quot;example.txt&quot;</span><span class="p">,</span> <span class="n">append</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">file</span><span class="o">.</span><span class="n">write_file</span><span class="p">(</span><span class="s2">&quot;This is some content.&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<h4 id="move_file_1"><strong>move_file</strong></h4>
+<blockquote>
+<p>Move the file associated with this <code>FileHandler</code> instance to a new location.</p>
+</blockquote>
+<p>Parameters</p>
+<ul>
+<li><code>new_location</code> (str): The path to the new location for the file.</li>
+</ul>
+<p>Usage
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">file</span> <span class="o">=</span> <span class="n">FileHandler</span><span class="p">(</span><span class="s2">&quot;example.txt&quot;</span><span class="p">,</span> <span class="n">append</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">file</span><span class="o">.</span><span class="n">move_file</span><span class="p">(</span><span class="s2">&quot;/new/directory/&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<h2 id="utils">utils</h2>
+<h3 id="print_directory">print_directory</h3>
+<blockquote>
+<p>Print the structure of a folder to the given depth.</p>
+</blockquote>
+<p>Parameters:</p>
+<ul>
+<li><code>folder_path</code> (str): The name or path of the folder to display the structure of</li>
+<li><code>depth</code> (int, optional): The depth at which to display the structure of (default depth is 3)</li>
+</ul>
+<p>Returns: None</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kn">from</span> <span class="nn">fileosninja.utils</span> <span class="kn">import</span> <span class="n">print_directory</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="n">print_directory</span><span class="p">(</span><span class="s2">&quot;root/&quot;</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+<p>Output:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>root
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>|-- child1
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>|   |-- file1.txt
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>|   |-- file2.txt
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>|-- child2
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>|   |-- child2_1
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>|   |-- child2_2
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>|       |-- child1.txt
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>|-- testfile.txt
+</code></pre></div></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>
