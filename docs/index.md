@@ -34,8 +34,8 @@ file_manager.read_file(filename)
 Parameters:
 
 - `filename` (str): The name or path of the file to be created or appended to.
-- `content` (str, optional): The content to be written to the file. Defaults to an empty string.
-- `append` (bool, optional): If True, appends content to an existing file; if False, overwrites the file. **Defaults to True.**
+- `content` (str, optional): The content to be written to the file.
+- `append` (bool, optional): If True, appends content to an existing file; if False, overwrites the file. **Default value is `True`**
 
 Appending to a file or creating an new file.
 ```python
@@ -57,7 +57,7 @@ Overwriting content in a file
 ```python
 file_path = "path/to/file/file.txt"
 content = "this is file content"
-file_manager.write_file(file_path, content=content, append=True)
+file_manager.write_file(file_path, content=content, append=False)
 ```
 
 ### move_file
@@ -65,8 +65,8 @@ file_manager.write_file(file_path, content=content, append=True)
 
  Parameters:
 
-- file_path (str): The path to the file to be moved.
-- new_folder (str): The path to the destination folder where the file will be moved.
+- `file_path` (str): The path to the file to be moved.
+- `new_folder` (str): The path to the destination folder where the file will be moved.
 
 `Note if the new folder does not exist, it will be created.`
 ```python
