@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import pathlib
 
-VERSION = '0.0.2'
+VERSION = '0.0.3'
 DESCRIPTION = 'A versatile Python module for streamlined file I/O operations and essential OS-related tasks. Simplify your code with the power of fileosninja, providing a cohesive and efficient solution for reading and writing files, along with seamless integration of operating system functionalities. Empower your projects with the core capabilities of fileosninja, designed for simplicity and performance.'
 
 # Setting up

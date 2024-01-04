@@ -3,6 +3,19 @@ import os
 
 class FileHandler:
     def __init__(self, filename, append=True):
+        """
+        Initialize a FileHandler object.
+
+        Parameters:
+        - filename (str): The name of the file to be handled.
+        - append (bool, optional): A flag indicating whether to append to an existing file 
+        (default is True). If False, the file will be truncated.
+
+        Usage:
+        ```python
+        file = FileHandler("example.txt", append=False)
+        ```
+        """
         self.filename = filename
         self.append = append
 
