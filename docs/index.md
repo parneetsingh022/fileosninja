@@ -77,6 +77,84 @@ new_folder = "new_folder/folder1/"
 move_file(file_path, new_folder)
 ```
 
+### rename_directory
+
+>Renames the given path (file or folder) to a new name.
+
+Parameters:
+
+- path (str): The path to the file/folder to be renamed.
+- new_name (str): The new name of the file/folder.
+
+Returns:
+None
+
+Raises:
+
+- FileNotFoundError: If the source file is not found.
+- IOError: If an error occurs while renaming the file.
+
+```python
+old_name="file.txt"
+new_name="file_new.txt"
+
+rename_directory(old_name,new_name)
+```
+
+### copy_file
+> Copies a file to a destination folder.
+
+Parameters:
+
+- file_path (str): The path to the file to be copied.
+- destination_folder (str): The path to the destination folder where the file will be copied to.
+- copy_name (str): The name of the copied file. (copy_of_{file_name} by default)
+
+Returns:
+None
+
+Raises:
+
+- FileNotFoundError: If the source file is not found.
+- IOError: If an error occurs while copying the file.
+
+```python
+file_path = "folder/file.txt"
+destination_folder = "folder2/files"
+copy_name = "final_file.txt" 
+# copy_name parameter is optional
+copy_file(file_path, destination_folder, copy_name=copy_name)
+```
+
+### copy_folder
+> Copies a folder (to the given depth) to a destination folder.
+
+Parameters:
+
+- folder_path (str): The path to the folder to be copied.
+- destination_folder (str): The path to the destination folder where the file will be copied to.
+- copy_name (str): The name of the copied folder (copy_of_{folder_name} by default)
+- depth (int): The depth at which to copy the folder. (deep copy by default)
+
+Returns:
+None
+
+Raises:
+
+- FileNotFoundError: If the source folder is not found.
+- IOError: If an error occurs while copying the folder.
+- AssertionError: If the destination_folder is within the source folder.
+
+```python
+folder_path = "folder/test_folder/"
+destination_folder = "folder2/files/"
+copy_name = "final_folder_name" 
+
+# depth is set to infinity by default
+copy_folder(folder_path, destination_folder, copy_name=copy_name, depth=float("inf"))
+```
+
+
 ## classes.file_handler
 This is a class representation of [file_manager](#file_manager). File Handler should be used when
 we have to do multiple operations on the same file and we don't want to write the name
