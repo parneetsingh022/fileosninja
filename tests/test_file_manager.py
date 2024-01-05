@@ -3,7 +3,7 @@ import tempfile
 import os
 import shutil
 
-from fileosninja.file_manager import read_file, write_file, move_file
+from fileosninja.file_manager import read_file, write_file, move_file, delete_file
 
 class TestFileManagerFunctions(unittest.TestCase):
 
@@ -79,6 +79,25 @@ class TestFileManagerFunctions(unittest.TestCase):
             result = test_file.read()
 
         self.assertEqual(result, new_content)
+
+    def test_delete_file_existing(self):
+        # Test deleting an existing file
+        file_path = os.path.join(self.temp_dir, 'test_delete_file.txt')
+
+        # Create the file
+        with open(file_path, 'w') as _:
+            pass
+
+        delete_file(file_path)
+
+        self.assertFalse(os.path.exists(file_path))
+
+    def test_delete_file_nonexistent(self):
+        # Test deleting a nonexistent file
+        file_path = os.path.join(self.temp_dir, 'non_existent_file.txt')
+
+        with self.assertRaises(FileNotFoundError):
+            delete_file(file_path)
 
     def test_move_file(self):
         # Test moving a file to a new folder
