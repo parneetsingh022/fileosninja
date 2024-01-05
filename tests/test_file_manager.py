@@ -85,8 +85,9 @@ class TestFileManagerFunctions(unittest.TestCase):
         file_path = os.path.join(self.temp_dir, 'test_delete_file.txt')
 
         write_file(file_path)
-        delete_file(file_path)
+        self.assertTrue(os.path.exists(file_path))
 
+        delete_file(file_path)
         self.assertFalse(os.path.exists(file_path))
 
     def test_delete_file_nonexistent(self):
