@@ -110,7 +110,7 @@ def rename_directory(path, new_name):
     Renames the given path (file or folder) to a new name.
 
     Parameters:
-    - path (str): The path to the file/folder to be renamed.
+    - path (str): The path to the folder to be renamed.
     - new_name (str): The new name of the file/folder.
 
     Returns:
