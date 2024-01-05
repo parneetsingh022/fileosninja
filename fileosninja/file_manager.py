@@ -51,6 +51,28 @@ def write_file(filename, content="", append=True):
     except IOError as e:
         raise IOError(f"Error creating/appending to the file '{filename}': {e}")
 
+def delete_file(filename):
+    """
+    Deletes the specified file.
+
+    Parameters:
+    - filename (str): The name or path of the file to be deleted.
+
+    Returns:
+    None
+
+    Raises:
+    FileNotFoundError: If the specified file is not found.
+    IOError: If an unexpected error occurs while deleting the file.
+
+    """
+    try:
+        os.remove(filename)
+    except FileNotFoundError:
+        raise FileNotFoundError(f"Couldn't find '{filename}' for deletion.")
+    except IOError as e:
+        raise IOError(f"Error deleting '{filename}': {e}")
+
 def move_file(file_path, new_folder):
     """
     Moves a file to a new folder.
@@ -82,7 +104,7 @@ def move_file(file_path, new_folder):
         raise FileNotFoundError(f"The source file '{file_path}' does not exist.")
     except IOError as e:
         raise IOError(f"Error moving the file from '{file_path}' to '{new_folder}': {e}")
-    
+
 def rename_directory(path, new_name):
     """
     Renames the given path (file or folder) to a new name.
