@@ -84,10 +84,7 @@ class TestFileManagerFunctions(unittest.TestCase):
         # Test deleting an existing file
         file_path = os.path.join(self.temp_dir, 'test_delete_file.txt')
 
-        # Create the file
-        with open(file_path, 'w') as _:
-            pass
-
+        write_file(file_path)
         delete_file(file_path)
 
         self.assertFalse(os.path.exists(file_path))
