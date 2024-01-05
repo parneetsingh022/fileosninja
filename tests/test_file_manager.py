@@ -4,12 +4,13 @@ import os
 import shutil
 
 from fileosninja.file_manager import (
-    read_file, 
+    read_file,
     write_file,
     copy_file,
     copy_folder,
     rename_directory,
     move_file,
+    delete_file,
 )
 
 class TestFileOperations(unittest.TestCase):
@@ -60,6 +61,25 @@ class TestFileOperations(unittest.TestCase):
         with self.assertRaises(IOError):
             write_file('/readonly/test.txt', 'Test content')
 
+    def test_delete_file_existing(self):
+        # Test deleting an existing file
+        filename = os.path.join(self.temp_dir, 'test_delete_file.txt')
+
+        write_file(filename)
+        self.assertTrue(os.path.exists(filename))
+
+        delete_file(filename)
+        self.assertFalse(os.path.exists(filename))
+
+    def test_delete_file_nonexistent(self):
+        # Test deleting a non-existent file
+        filename = os.path.join(self.temp_dir, 'test_delete_file.txt')
+
+        self.assertFalse(os.path.exists(filename))
+
+        with self.assertRaises(FileNotFoundError):
+            delete_file(filename)
+
     def test_move_file(self):
         # Create a temporary file
         test_file = os.path.join(self.temp_dir, 'test.txt')
@@ -93,8 +113,6 @@ class TestFileOperations(unittest.TestCase):
         new_path = os.path.join(self.temp_dir, new_name)
         self.assertTrue(os.path.exists(new_path))
 
-
-
     def test_copy_file(self):
         # Create a temporary file
         test_file = os.path.join(self.temp_dir, 'test.txt')
@@ -111,7 +129,6 @@ class TestFileOperations(unittest.TestCase):
         # Check if the copied file exists in the destination folder
         copied_file = os.path.join(dest_folder, 'copy_of_test.txt')
         self.assertTrue(os.path.exists(copied_file))
-
 
     def test_copy_folder(self):
         # Create a temporary directory with some content

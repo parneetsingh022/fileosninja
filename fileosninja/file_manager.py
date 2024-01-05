@@ -122,7 +122,7 @@ def rename_directory(path, new_name):
     """
     try:
         # path to the file/folder excluding itself
-        base_directory = os.path.dirname(path) 
+        base_directory = os.path.dirname(path)
 
         # construct the new path with the new name
         new_path = os.path.join(base_directory, new_name)
@@ -164,7 +164,7 @@ def copy_file(file_path, destination_folder, copy_name=None):
         raise FileNotFoundError(f"The source file '{file_path}' does not exist.")
     except IOError as e:
         raise IOError(f"Error copying the file from '{file_path}' to '{destination_path}': {e}")
-    
+
 def copy_folder(folder_path, destination_folder, copy_name=None, depth=float("inf")):
     """
     Copies a folder (to the given depth) to a destination folder.
@@ -187,11 +187,11 @@ def copy_folder(folder_path, destination_folder, copy_name=None, depth=float("in
         # Ensure the destination folder is not within the source folder
         try:
             common_path = os.path.commonpath([folder_path, destination_folder])
-            assert common_path != folder_path, "Destination folder should not be inside source folder"     
+            assert common_path != folder_path, "Destination folder should not be inside source folder"
         except ValueError:
             # commonpath raises ValueError if the paths have no common prefix
             pass
-        
+
         # Recursively copy directory
         def copy_current_directory(current_path, current_destination_folder, current_depth):
             if not os.path.exists(current_path):
@@ -213,7 +213,7 @@ def copy_folder(folder_path, destination_folder, copy_name=None, depth=float("in
                     for file in os.listdir(current_path):
                         new_current_path = os.path.join(current_path, file)
                         copy_current_directory(new_current_path, new_destination_path, current_depth + 1)
-                
+
                 # if file, copy file
                 else:
                     copy_file(current_path, current_destination_folder, copy_name=current_path_name)
